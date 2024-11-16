@@ -1,40 +1,50 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ATV5e7Id)
 
 # DISCOVER BY PHOTO
-This game is a guessing game played interactively on the world map. This game shows the user a photo of a certain country and allows the user to mark the photo on the map by guessing which country it belongs to. The user earns points for correct guesses, and loses points for incorrect guesses. A certain amount of time is given for each round, and the game is played with a series of photos covering 20 different countries around the world.
+This game is a guessing game played interactively on the world map. This game first asks the user which theme they want to play the game in. For example, cultural places, food, touristic places, etc. The player selects the area they want to play and the game starts. The player tries to guess which city the photo belongs to from the given options.
 
-## Game Mechanism
--The user is shown a photo of a randomly selected country on the screen.
+## Game Mechanism -
+- The user is asked which theme they want to play on.
 
--The user guesses which country the photo belongs to by marking it on the map.
-The user earns points for correct guesses, and loses points for incorrect guesses.
+- The user selects the theme and photos that fit that theme are shown to the player as a pop-up from countries.
 
--The user is given a limited time in each round. They are expected to guess before the time runs out.
+- Since there are no country names on the map, the player tries to guess which city in the country the given photo belongs to.
 
--The game continues until all the photos are finished or a certain score is reached.
+- The user is given a certain amount of time. They try to collect the most points within this time.
+
+- The player has the right to give 3 wrong answers. If they run out of lives, the game ends and their score is reset.
 
 ## Requirements
-### 20 Countries and 20 Photos: 
-The game must contain 20 photos of 20 different countries. A photo is shown in each round, allowing the player to make a guess.
-### Marking on the Map: 
-The player must be able to mark the country they guess on the map.The accuracy is evaluated by comparing the marking made on the map with the country the photo belongs to.
+### Photos of cities:
+The game should include photos of many cities with different themes.
+### Marking the correct option:
+The player should be able to mark the city he guessed correctly from the given options.
 ### Scoring System:
-10 points are given to the user for correct markings.
-The user loses 5 points for incorrect markings.
-###Time Limit:
-A certain time (e.g. 30 seconds) must be set for each round. The user must make the correct guess before the time runs out.
+The user is given 10 points for marking correctly. He has 3 lives. The game ends when his lives run out.
+### Time Limit:
+The player must try to collect the highest score within 90 seconds.
 ### Game Interface:
-Photo Area: The photo of the country to be guessed is shown in this area.
+Photo Area: The photo of the city to be guessed is shown on the map country.
 
-Map Area: The user selects the country on the Cesium map and marks it.
+Map Area: The user sees the country on the Leaflet map and tries to choose the correct city.
 
-Score and Time Indicator: The user's current score and the tour duration are shown in this area
+Score and Time Indicator: The user's current score and lap time are shown in this area
 
 ## JavaScript Library to Use 
-In this project, the Cesium JavaScript library will be used to display map operations and country locations to the user correctly. Cesium is a library that provides powerful 3D and 2D map support for geographic applications. For this project, the map will be created using the Esri World Imagery layer in Cesium's 3D mode.
+In this project, Leaflet.js library will be used because it provides ease of use in terms of using interactive maps. Supporting various map providers (OpenStreetMap, Google Maps, Bing Maps etc.) makes Leaflet.js more effective. The aim of this project is to find which city a given image of a city belongs to. For this, a test will be presented to the user, but this test will appear as a pop-up from the country where that city is located. In this way, the user's probability of guessing the correct city will increase. 
+The L.popup() function from Leaflet.js will be used to display questions.
 
 ## Sample Representation
-![geogame](https://github.com/user-attachments/assets/1f4fc626-7614-4faa-adfb-4c1b97e63dde)
+![start](https://github.com/user-attachments/assets/b1fe1ee1-3408-4335-bf4c-afc06ba03d0f)
+![geogame](https://github.com/user-attachments/assets/e9318b69-adb0-416f-98ce-92ae8bb0f233)
+
+
+
+
+
+
+
+
 
 
 
