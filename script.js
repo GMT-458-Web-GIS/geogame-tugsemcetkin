@@ -74,7 +74,7 @@ const questionData = {
             "correctOption": 2
         },
         {
-            "image": "images/Milford.jpeg",
+            "image": "images/Milford.jpg",
             "latitude": -44.6704,
             "longitude": 167.9273,
             "question": "Which city is Milford Sound located near?",
