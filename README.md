@@ -84,7 +84,7 @@ https://chatgpt.com/share/67545634-e0d0-8000-97f1-73531d560db7
 
 ![image](https://github.com/user-attachments/assets/37016fcf-b03d-46db-a3da-2194db178037)
 
-- Click to reach the game :
+- Click to reach the game : https://gmt-458-web-gis.github.io/geogame-tugsemcetkin/
 
 
 
