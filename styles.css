@@ -1,0 +1,289 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Arial', sans-serif; /* Daha modern bir yazı tipi */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e44ad, #3498db); /* Daha canlı bir gradient */
+    color: #fff; /* Metin rengi beyaz */
+}
+
+/* Başlangıç Ekranı */
+.start-screen {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15); /* Yarı saydam arka plan */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Başlık */
+.main-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffe600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+/* Tema Butonları */
+.theme-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.theme-button {
+    padding: 15px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.theme-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Seçilen Temanın Vurgulanması */
+.theme-button.selected {
+    background-color: #2ecc71; /* Daha parlak bir yeşil */
+    color: white;
+    transform: scale(1.1);
+    border: 2px solid #27ae60;
+}
+
+/* Açıklama Metni */
+.description {
+    font-size: 16px;
+    color: #bdc3c7;
+    margin-bottom: 20px;
+}
+
+/* Başlat Butonu */
+.start-button {
+    background-color: #9b59b6;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.start-button:hover {
+    background-color: #8e44ad;
+    transform: translateY(-5px);
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Oyun Ekranı */
+#game-container {
+    position: relative;
+    height: 100vh; /* Tam ekran yüksekliği */
+    width: 100vw;  /* Tam ekran genişliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Harita */
+#map {
+    height: 100%; /* Harita boyutunu optimize ettim */
+    width: 100%;  
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #304860; /* Hafif bir çerçeve */
+}
+
+
+
+
+/* Soru Kutusu */
+#question-container {
+    position: absolute; /* Kutuyu sabitle */
+    top: 50%; /* Dikey ortalama */
+    left: 50%; /* Yatay ortalama */
+    transform: translate(-50%, -50%); /* Ortalamayı tam yap */
+    background-color: rgba(255, 255, 255, 0.9); /* Hafif saydam arka plan */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center; /* İçeriği hizala */
+    z-index: 1000; /* Haritanın üstünde görünmesini sağla */
+    display: flex; /* Flexbox düzenini etkinleştir */
+    flex-direction: column; /* İçeriği dikey sıralamak için */
+    justify-content: center; /* İçeriği dikey ortala */
+    align-items: center; /* İçeriği yatay ortala */
+    gap: 20px; /* İçerik elemanları arasında boşluk */
+    max-width: 80%; /* Mobil ekranlarda genişliği sınırla */
+    width: 300px; /* Kutunun genişliği */
+}
+
+/* Soru Resmi */
+#question-image {
+    max-width: 300px; /* Görselin genişliğini kutunun içinde sınırla */
+    height: 300px;
+    border-radius: 30px; /* Görsel köşelerini yuvarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+/* Soru Metni */
+#question-container p {
+    font-size: 80px;
+    font-weight: bold;
+    color: #0a0000;
+    text-align: center;
+}
+
+/* Seçenek Kutusu */
+#options {
+    display: flex;
+    flex-direction: column; /* Seçenekleri dikey hizala */
+    align-items: center; /* Ortala */
+    gap: 10px; /* Seçenekler arasında boşluk */
+    width: 100%; /* Seçeneklerin genişliğini kapsayıcıya göre ayarla */
+    max-width: 400px; /* Çok geniş olmasını engelle */
+    margin: 0 auto; /* Ortala */
+}
+
+/* Seçenek Butonları */
+.option-button {
+    width: 50%; /* Butonları kapsayıcıya göre genişlet */
+    max-width: 300px; /* Çok geniş olmasını engelle */
+    padding: 10px;
+    background-color: #c399e5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    text-align: center; /* Metni ortala */
+}
+
+.option-button:hover {
+    background-color: #c399e5;
+    transform: scale(1.05); /* Hover sırasında biraz büyüt */
+}
+
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .start-screen {
+        padding: 20px;
+        width: 95%;
+    }
+
+    #map {
+        height: 50%; /* Mobilde haritanın boyutunu küçült */
+    }
+
+    .theme-options {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 10px;
+    }
+
+    .start-button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+/* Animasyon - Fade-in ve Yukarıdan Aşağıya Kayma */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Yukarıdan başlar */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Normal pozisyona gelir */
+    }
+}
+
+/* Oyun Bilgisi Kutusu Animasyonu */
+#game-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.6); /* Saydam arka plan */
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Haritanın üstünde görünsün */
+    animation: slideIn 1s ease-in-out; /* Animasyon ekleniyor */
+}
+
+#game-info div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* Kalplerin Görünümü */
+#lives span {
+    font-size: 18px;
+    color: purple;
+    animation: slideIn 1.2s ease-in-out; /* Animasyon ekleniyor */
+}
+
+/* Skor ve Süre İçin Özel Animasyon */
+#score, #timer {
+    animation: slideIn 1.5s ease-in-out; /* Skor ve süre animasyonu daha geç gelir */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

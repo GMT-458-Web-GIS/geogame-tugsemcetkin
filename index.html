@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Discover by Photo 🖼️</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+<body>
+    <div class="start-screen" id="start-screen">
+        <h1 class="main-title">🌍 Discover by Photo 🖼️</h1>
+        <h2 class="subtitle">Which theme do you want to play?</h2>
+        <div class="theme-options">
+            <button class="theme-button" data-theme="Nature">🌿 Nature</button>
+            <button class="theme-button" data-theme="Culture">🎭 Culture</button>
+            <button class="theme-button" data-theme="Cuisine">🍽️ Cuisine</button>
+            <button class="theme-button" data-theme="History">📜 History</button>
+            
+
+        </div>
+        <p class="description">
+            Pick a theme to get started! Each theme brings a unique set of photos and challenges.
+        </p>
+        <button class="start-button" id="start-button">🚀 START</button>
+        
+    </div>
+    <div id="game-container" style="display: none;">
+        <div id="overlay-text">
+            <h1>Welcome to the Game!</h1>
+            <p id="selected-theme-text"></p>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div id="question-container" style="display: none;">
+    <img id="question-image" src="" alt="Nature Image" style="width: 300px; height: 200px;" />
+    <div id="map-container" style="height: 500px; width: 100%;"></div>
+    <div id="options">
+        <button class="option-button" data-option="1">Option 1</button>
+        <button class="option-button" data-option="2">Option 2</button>
+        <button class="option-button" data-option="3">Option 3</button>
+        <button class="option-button" data-option="4">Option 4</button>
+    </div>
+</div>
+
+<div id="game-info">
+    <div id="timer">⏱ Time: <span id="time-remaining">90</span>s</div>
+    <div id="score">⭐ Score: <span id="score-value">0</span></div>
+    <div id="lives">💜 Lives: 
+        <span id="life-1">💜</span>
+        <span id="life-2">💜</span>
+        <span id="life-3">💜</span>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
