@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ATV5e7Id)
 
 # 🌍 Discover by Photo 🖼️
-This game is a guessing game played interactively on the world map. This game first asks the user which theme they want to play the game in. For example, cultural places, food, touristic places, etc. The player selects the area they want to play and the game starts. The player tries to guess which city the photo belongs to from the given options.
+This game is a guessing game played interactively on the world map. This game first asks the user which theme they want to play the game in. For example, cultural places, food, natural places, etc. The player selects the theme they want to play and the game starts. The player tries to guess which city the photo belongs to from the given options.
 
 ## Game Mechanism 
 - The user is asked which theme they want to play on.
